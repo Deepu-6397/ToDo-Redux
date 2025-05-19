@@ -1,0 +1,113 @@
+/* App-wide attractive card styling */
+.app-outer-card {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.app-inner-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.08);
+  padding: 24px 16px 20px 16px;
+  min-width: 340px;
+  max-width: 600px;
+  width: 100%;
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: fadeInUp 0.7s;
+}
+
+@media (max-width: 600px) {
+  .app-inner-card {
+    padding: 18px 4vw 18px 4vw;
+    min-width: unset;
+    max-width: 98vw;
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Card animation and styling for todo cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-card {
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.todo-card.done {
+  background: #f3f3f3;
+  opacity: 0.7;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

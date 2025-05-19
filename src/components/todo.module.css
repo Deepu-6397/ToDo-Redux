@@ -1,0 +1,63 @@
+.todo-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-card {
+  animation: fadeInUp 0.4s both;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  position: relative;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.todo-card.done {
+  background: #f3f3f3;
+  opacity: 0.7;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-task {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1.5px solid #dbeafe;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1.5px 4px rgba(0,0,0,0.04);
+  transition: all 0.2s;
+  margin-right: 8px;
+  word-break: break-word;
+}
+.todo-card.done .todo-task {
+  background: #f3f3f3;
+  border: 1.5px solid #e5e7eb;
+  color: #aaa;
+  text-decoration: line-through;
+  box-shadow: none;
+}
